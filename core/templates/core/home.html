@@ -1,0 +1,49 @@
+{% extends 'core/base.html' %}
+{% load static %}
+{% block content %}
+<div class="mt-3">
+    <div class="text-center">
+        
+        <img src="{% static 'core/images/pic1.jpg' %}" alt="ProfilePic" class="img-thumbnail" width="250px" height="150px">
+        <div class="container mt-1 bg-dark shadow-sm ">
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="text-center">
+                        <a href="https://www.linkedin.com/in/mujahid-fighter/" target="_blank"><i class="fab fa-linkedin i-color mr-3"></i></a>
+                        <a href="https://twitter.com/Mujahid_Fighter" target="_blank"><i class="fab fa-twitter i-color mr-3"></i></a>
+                        <a href="https://www.facebook.com/mujahid7fighter/" target="_blank"><i class="fab fa-facebook-f i-color mr-3"></i></a>
+                        <a href="https://www.instagram.com/mujahid_fighter/" target="_blank"><i class="fab fa-instagram i-color mr-3"></i></a>
+                        <a href="#" target="_blank"><i class="fab fa-whatsapp i-color mr-3"></i></a>
+                        <a href="https://github.com/Mujahid-Alam" target="_blank"><i class="fab fa-github i-color mr-3"></i></a>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="text-white mt-3 mx-5 text-justify">
+        <h1 class="font-weight-bold st-font">Hello,</h1>
+        <div class="px-4" style="line-height:1.5em;">
+            <p style="text-indent:80px;"> I am <b class="text-warning">Mujahid Alam.</b> I have the skills of developing the website using Python (Django).
+                Having 1+ year of full stack web development experince for own project
+                and very much interested in HTML, CSS, Bootstrap, SQL, GitHub, AWS, Heroku.
+                </p>
+
+                <p>Since earning my bachlor's digree <b class="text-warning">Computer Science & Engineering</b> from Vidya Vihar Institute of Technology maranga, Purnia BIHAR, 
+                    <br>in the year of <i class="text-warning">2021.</i><br>
+
+                I had completed my senior secondary from M. L. Arya coleege kasba Purnia BIHAR in 2017<br>
+                    I had completed my secondary from Routa High School Routa Purnia BIHAR in 2015<br>
+                    my strength is self-confidence, Positive attitude, Hardwork and
+                    my weakness is : I can easily believe every one.<br>
+                    my hobbies are : Playing Football, Running and Driving. </p>
+        </div>
+    </div>
+<div class="text-center">
+    <a href="{% url 'contact' %}" class="btn btn-outline-warning my-3 mr-5">Hire Me</a>
+    <a href="{% url 'contact' %}" class="btn btn-outline-info my-3">Contect</a>
+</div>
+</div>
+
+
+{% endblock content %}
