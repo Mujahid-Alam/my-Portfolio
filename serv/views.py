@@ -1,5 +1,5 @@
 from django.shortcuts import render
-
+from .models import Project
 # Create your views here.
 def services(request):
     context = {'serv': 'active'}
@@ -7,5 +7,12 @@ def services(request):
 
 
 def projects(request):
-    context = {'proj': 'active'}
+    project = Project.objects.all()
+
+    context = {
+        'proj': 'active',
+        'project': project
+        
+        }
+
     return render(request, 'serv/projects.html',context)

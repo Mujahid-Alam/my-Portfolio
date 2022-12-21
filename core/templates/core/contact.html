@@ -1,37 +1,55 @@
 {% extends 'core/base.html' %}
+
+
 {% block content %}
 <div class="container mt-5 ">
     <h1 class="text-warning mb-4 border-bottom ">CONTACT US</h1>
     <div class="row text-white mb-4.5 ">
         <p class="mx-auto mb-5 text-center">
             <b>Do you have any question? Please do not hesitate to contact. <br>I will come
-            back to you within a matter of hours to help you. </b></p>
-        <div class="col-sm-9">
-            <form action="" >
+            back to you within a matter of hours to help you. </b>
+        </p>
+
+<!-- #  -------- CONTACT -------  FORM  -->
+        <div class="col-sm-7 "  >
+            <form action="/contact/" method="POST" style="margin-left: 180px; border: 2px; border-color: blue; " >
+                {% csrf_token %}
                 <div class="form-row" >
-                    <div class="form-group col-md-6">
+                    <div class="form-group ">
                         <label for="inputName"><b>Your Name</b></label>
-                        <input type="text" class="form-control" id="inputName" placeholder="Your Name" />
+                        <input name="name" type="text" class="form-control" id="inputName" placeholder="Your Name" />
                     </div>
 
-                    <div class="form-group mt-3 col-md-6 ">
+                    <div class="form-group mt-2  ">
                         <label for="inputEmail"><b>Your Email </b>*</label>
-                        <input type="email" class="form-control" id="inputEmail" placeholder="Your Email" required />
+                        <input name="email" type="email" class="form-control" id="inputEmail" placeholder="Your Email" required />
                     </div>
                 </div>
-                <div class="form-group mt-3">
+                <div class="form-group mt-2 ">
                     <label for="inputSubject"><b>Your Subject</b></label>
-                    <input type="text" class="form-control" id="inputSubject" placeholder="Your Subject" />
+                    <input name="subject" type="text" class="form-control" id="inputSubject" placeholder="Your Subject" />
                 </div>
 
-                <div class="mt-3">
+                <div class="mt-2">
                     <label for="inputTextarea"><b>Your Message</b>*</label>
-                    <textarea class="form-control" id="inputTextarea" required placeholder="Your Messages"></textarea>
+                    <textarea name="message" class="form-control" id="inputTextarea" required placeholder="Your Messages"></textarea>
                 </div>
-                <button class="btn btn-primary btn-lg btn-block mt-3" type="submit">Send</button>  
+                <!-- <button class="btn btn-primary mt-3" style="background-color: aqua;" type="submit">Send</button>  -->
+                <!-- <a href="" class="btn btn-success mt-3  btn-lg btn-block">Submit</a>  -->
+                <div class="container mt-2">
+                    <div class="row">
+                        <div class="col text-center">
+                            <button type="button" class="btn btn-primary " type="submit" style="float: center;">Submit</button>
+
+                        </div>
+                    </div>
+                </div>
              
             </form>
         </div>
+
+        <!-- #   -----------  Address ------------ -->
+
         <div class="col-sm-3 text-center">
             <ul class="list-unstyled">
                 <li>
@@ -52,13 +70,19 @@
     </div>
 </div>
 
-<div class="text-center">
-    <a href="https://www.linkedin.com/in/mujahid-fighter/" target="_blank"><i class="fab fa-linkedin i-color mr-3"></i></a>
-    <a href="https://twitter.com/Mujahid_Fighter" target="_blank"><i class="fab fa-twitter i-color mr-3"></i></a>
-    <a href="https://www.facebook.com/mujahid7fighter/" target="_blank"><i class="fab fa-facebook-f i-color mr-3"></i></a>
-    <a href="https://www.instagram.com/mujahid_fighter/" target="_blank"><i class="fab fa-instagram i-color mr-3"></i></a>
-    <a href="https://wa.me/+919507008132/" target="_blank"><i class="fab fa-whatsapp i-color mr-3"></i></a>
-    <a href="https://github.com/Mujahid-Alam" target="_blank"><i class="fab fa-github i-color mr-3"></i></a>
+<div class="container" >
+    <div class="row">
+        <div class="col-lg-12 mt-5" style="margin-left: 329px;" >
+            <div class="">
+                <a href="https://www.linkedin.com/in/mujahid-fighter/" target="_blank"><i class="fab fa-linkedin i-color mr-3"></i></a>
+                <a href="https://twitter.com/Mujahid_Fighter" target="_blank"><i class="fab fa-twitter i-color mr-3"></i></a>
+                <a href="https://www.facebook.com/mujahid7fighter/" target="_blank"><i class="fab fa-facebook-f i-color mr-3"></i></a>
+                <a href="https://www.instagram.com/mujahid_fighter/" target="_blank"><i class="fab fa-instagram i-color mr-3"></i></a>
+                <a href="https://wa.me/+919507008132/" target="_blank"><i class="fab fa-whatsapp i-color mr-3"></i></a>
+                <a href="https://github.com/Mujahid-Alam" target="_blank"><i class="fab fa-github i-color mr-3"></i></a>
+            </div>
+        </div>
+    </div>
 </div>
 
 {% endblock content %}
