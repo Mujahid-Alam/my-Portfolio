@@ -1,7 +1,7 @@
 # my-Portfolio  / My Resume
 
 # virtual env >
-  >>>  virtualenv env
+  virtualenv environment
 
 
  #You can use this file to install all the packages you need in a new virtual environment:

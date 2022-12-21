@@ -4,3 +4,8 @@ from django.shortcuts import render
 def services(request):
     context = {'serv': 'active'}
     return render(request, 'serv/services.html',context)
+
+
+def projects(request):
+    context = {'proj': 'active'}
+    return render(request, 'serv/projects.html',context)
